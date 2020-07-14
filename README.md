@@ -3,9 +3,9 @@ About r-tidymodels
 
 Home: https://github.com/tidymodels/tidymodels
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
 

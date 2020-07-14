@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidymodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidymodels/tidymodels_{{ version }}.tar.gz
-  sha256: a84a28113d2b175a416446ee2208ea73d6800fb5ef2ae5e18ac2190710dc25ae
+  sha256: 2472d17da0da8dae1a4fd392e1500c40bfccf09ed9f0491dc5954e414cb65d70
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,52 +25,48 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-broom >=0.5.4
-    - r-cli >=2.0.1
+    - r-broom >=0.7.0
+    - r-cli >=2.0.2
     - r-crayon >=1.3.4
-    - r-dials >=0.0.4
-    - r-dplyr >=0.8.4
-    - r-ggplot2 >=3.2.1
-    - r-infer >=0.5.1
+    - r-dials >=0.0.8
+    - r-dplyr >=1.0.0
+    - r-ggplot2 >=3.3.2
+    - r-infer >=0.5.2
     - r-magrittr >=1.5
-    - r-parsnip >=0.0.5
-    - r-pillar >=1.4.2
-    - r-purrr >=0.3.3
-    - r-recipes >=0.1.9
-    - r-rlang >=0.4.4
-    - r-rsample >=0.0.5
+    - r-modeldata >=0.0.2
+    - r-parsnip >=0.1.2
+    - r-purrr >=0.3.4
+    - r-recipes >=0.1.13
+    - r-rlang >=0.4.7
+    - r-rsample >=0.0.7
     - r-rstudioapi >=0.11
-    - r-tibble >=2.1.3
-    - r-tidytext >=0.2.2
-    - r-tidypredict >=0.4.3
-    - r-tidyposterior >=0.0.2
-    - r-tune >=0.0.1
-    - r-workflows >=0.1.0
-    - r-yardstick >=0.0.4
+    - r-tibble >=3.0.3
+    - r-tidyr >=1.1.0
+    - r-tune >=0.1.1
+    - r-workflows >=0.1.2
+    - r-yardstick >=0.0.7
   run:
     - r-base
-    - r-broom >=0.5.4
-    - r-cli >=2.0.1
+    - r-broom >=0.7.0
+    - r-cli >=2.0.2
     - r-crayon >=1.3.4
-    - r-dials >=0.0.4
-    - r-dplyr >=0.8.4
-    - r-ggplot2 >=3.2.1
-    - r-infer >=0.5.1
+    - r-dials >=0.0.8
+    - r-dplyr >=1.0.0
+    - r-ggplot2 >=3.3.2
+    - r-infer >=0.5.2
     - r-magrittr >=1.5
-    - r-parsnip >=0.0.5
-    - r-pillar >=1.4.2
-    - r-purrr >=0.3.3
-    - r-recipes >=0.1.9
-    - r-rlang >=0.4.4
-    - r-rsample >=0.0.5
+    - r-modeldata >=0.0.2
+    - r-parsnip >=0.1.2
+    - r-purrr >=0.3.4
+    - r-recipes >=0.1.13
+    - r-rlang >=0.4.7
+    - r-rsample >=0.0.7
     - r-rstudioapi >=0.11
-    - r-tibble >=2.1.3
-    - r-tidytext >=0.2.2
-    - r-tidypredict >=0.4.3
-    - r-tidyposterior >=0.0.2
-    - r-tune >=0.0.1
-    - r-workflows >=0.1.0
-    - r-yardstick >=0.0.4
+    - r-tibble >=3.0.3
+    - r-tidyr >=1.1.0
+    - r-tune >=0.1.1
+    - r-workflows >=0.1.2
+    - r-yardstick >=0.0.7
 
 test:
   commands:
@@ -79,12 +75,11 @@ test:
 
 about:
   home: https://github.com/tidymodels/tidymodels
-  license: GPL-3
-  summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical
-    analysis that share the underlying design philosophy, grammar, and data structures
-    of the tidyverse.
+  license: GPL-3.0-only
+  summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
