@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidymodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidymodels/tidymodels_{{ version }}.tar.gz
-  sha256: a84a28113d2b175a416446ee2208ea73d6800fb5ef2ae5e18ac2190710dc25ae
+  sha256: 2472d17da0da8dae1a4fd392e1500c40bfccf09ed9f0491dc5954e414cb65d70
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -80,11 +80,9 @@ test:
 about:
   home: https://github.com/tidymodels/tidymodels
   license: GPL-3
-  summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical
-    analysis that share the underlying design philosophy, grammar, and data structures
-    of the tidyverse.
+  summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
