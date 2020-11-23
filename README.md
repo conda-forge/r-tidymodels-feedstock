@@ -5,11 +5,9 @@ Home: https://github.com/tidymodels/tidymodels
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidymodels-feedstock/blob/master/LICENSE.txt)
 
 Summary: The tidy modeling "verse" is a collection of packages for  modeling and statistical analysis that share the underlying design philosophy, grammar, and data structures of the tidyverse.
-
-
 
 Current build status
 ====================
