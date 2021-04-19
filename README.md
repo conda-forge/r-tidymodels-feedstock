@@ -3,7 +3,7 @@ About r-tidymodels
 
 Home: https://github.com/tidymodels/tidymodels
 
-Package license: GPL-3.0-only
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidymodels-feedstock/blob/master/LICENSE.txt)
 
