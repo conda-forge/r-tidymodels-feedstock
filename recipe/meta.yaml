@@ -1,4 +1,4 @@
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidymodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidymodels/tidymodels_{{ version }}.tar.gz
-  sha256: cd1e0fba314c0638b0aa26437c41ce00886531926f199cb9463140601bf379a2
+  sha256: 9128ce8bdcb9836fd62a5b86ebfbed4f80516afe69acadcf08691e3b89267bf6
 
 build:
   merge_build_host: true  # [win]
