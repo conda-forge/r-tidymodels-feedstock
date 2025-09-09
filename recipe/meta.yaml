@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidymodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidymodels/tidymodels_{{ version }}.tar.gz
-  sha256: 590af27514a69415e77201e6926d1fd43327e228cdea845a572cfed2a58f10ea
+  sha256: aea6df3c32b31dd79776c529c87fe16fb9dcc5b157b993b449b41dd3a57657f6
 
 build:
   number: 0
